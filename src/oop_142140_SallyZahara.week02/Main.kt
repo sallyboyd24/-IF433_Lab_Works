@@ -1,32 +1,48 @@
-package ` oop_142140_SallyZahara`.week02
+package oop_142140_SallyZahara.week02
 
 import java.util.Scanner
 
 fun main() {
-    val scanner = Scanner(source =  System.'in')
+    val scanner = Scanner(System.`in`)
 
     println("--- APLIKASI PMB UMN ---")
 
-    print("Masukkan Nama:")
-    val name = scanner.nextline()
+    print("Masukkan Nama: ")
+    val name = scanner.nextLine()
 
-    print("Masukkan NIM (Wajib 5 Karakter); ")
-    val nim = scanner.next()
+    print("Masukkan NIM (Wajib 5 Karakter): ")
+    val nim = scanner.nextLine()
 
-    scanner.nextline()
-
-    if (nim.length != 5){
+    if (nim.length != 5) {
         println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter!")
-
     } else {
-        print("Masukkan Jurusan: ")
-        val major = scanner.nextline()
 
-        val s1 = Student(name, nim, major)
-        println("Status: Pendaftaran Selesai.")
+        print("Pilih jalur (1. Reguler, 2. Umum): ")
+        val type = scanner.nextInt()
+        scanner.nextLine()
+
+        if (type == 1) {
+
+            print("Masukkan Jurusan: ")
+            val major = scanner.nextLine()
+
+            val s1 = Student(name, nim, major)
+
+            println("Status: Pendaftaran Selesai.")
+            println("Terdaftar di: ${s1.major} dengan GPA awal ${s1.gpa}")
+
+        } else if (type == 2) {
+
+            val s2 = Student(name, nim)
+
+            println("Status: Pendaftaran Selesai.")
+            println("Terdaftar di: ${s2.major} dengan GPA awal ${s2.gpa}")
+
+        } else {
+
+            println("Pilihan ngawur, pendaftaran batal!")
+        }
     }
-}
 
-constructor(name: String, nim: String) : this(name, nim, major = "Non-Matriculated") {
-    println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
+    scanner.close()
 }
