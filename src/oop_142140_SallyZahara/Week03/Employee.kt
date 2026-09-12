@@ -1,5 +1,7 @@
 package oop_142140_SallyZahara.Week03
 
+import kotlin.times
+
 class Employee(val name: String) {
 
     private var performanceRating: Int = 3
@@ -23,10 +25,9 @@ class Employee(val name: String) {
             }
 
         }
+    val tax: Double
+        get() = salary * 0.1
 }
-
-
-
 
 
 
