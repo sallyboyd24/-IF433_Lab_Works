@@ -1,4 +1,4 @@
-package oop_142140_SallyZahara.week02
+package oop_142140_SallyZahara
 
 class Student(
     val name: String,
