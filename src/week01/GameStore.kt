@@ -29,7 +29,7 @@ fun printReceipt(
     finalPrice: Int,
     note: String?
 ) {
-    println("===== STEAMKW =====")
+    println("===== STEAM =====")
     println("Judul Game: $title")
     println("Harga Asli: Rp$originalPrice")
     println("Harga Akhir: Rp$finalPrice")
