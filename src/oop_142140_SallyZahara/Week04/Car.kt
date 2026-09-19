@@ -1,4 +1,4 @@
-package Week04
+package oop_142140_SallyZahara.Week04
 
 open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
 
