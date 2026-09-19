@@ -1,4 +1,4 @@
-package oop_001_johnthor.week01
+package oop_142140_SallyZahara.Week01
 
 fun main() {
     val radius : Double  = 7.0
@@ -11,8 +11,8 @@ fun main() {
 
 fun checkSize(area: Double) {
     if (area > 100) {
-       println "This is a Big Circle"
+        println("This is a Big Circle")
     } else {
-        println "This is a Small Circle"
+        println("This is a Small Circle")
     }
 }
