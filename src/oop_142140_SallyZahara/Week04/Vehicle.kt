@@ -8,7 +8,9 @@ open class Vehicle(val brand: String) {
         println("$brand melaju. Kecepatan: $speed km/jam")
     }
 
-    open fun hook(){
+    open fun honk(){
         println("Beep beep!")
+    }
+
     }
 }
