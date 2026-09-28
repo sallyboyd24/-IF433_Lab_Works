@@ -1,7 +1,5 @@
 package oop_142140_SallyZahara.Week05
 
-package oop_142140_SallyZahara.week05
-
 class MathHelper {
 
     fun hitungLuas(sisi: Int): Int {
