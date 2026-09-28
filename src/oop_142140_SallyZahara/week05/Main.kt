@@ -36,6 +36,41 @@ fun main() {
         println("Luas persegi panjang: ${math.hitungLuas(10, 5)}")
         println("Luas lingkaran: ${math.hitungLuas(7.0)}")
 
+        println("=== TUGAS MANDIRI 2 ===")
+
+        val eWallet = EWallet(
+            accountName = "Sally",
+            balance = 50000.0
+        )
+
+        val creditCard = CreditCard(
+            accountName = "Sally",
+            limit = 100000.0
+        )
+
+        val paymentMethods: List<PaymentMethod> = listOf(
+            eWallet,
+            creditCard
+        )
+
+        for (payment in paymentMethods) {
+
+            println("Akun: ${payment.accountName}")
+
+            payment.processPayment(75000.0)
+
+            if (payment is EWallet) {
+                println("Saldo tidak cukup, melakukan top up...")
+
+                payment.topUp(50000.0)
+
+                println("Mencoba pembayaran lagi...")
+                payment.processPayment(75000.0)
+            }
+
+            println()
+        }
+
     }
 }
 
