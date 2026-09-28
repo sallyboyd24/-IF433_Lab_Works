@@ -27,7 +27,3 @@ fun main(){
     developer.work()
     println("Bonus ${developer.name}: Rp ${developer.calculateBonus()}")
 }
-
-
-
-}

@@ -1,13 +1,13 @@
-package oop_001_johnthor.week01
+package oop_142140_SallyZahara.Week01
 
 fun main() {
     // REFACTOR: Gunakan val dan hapus tipe data eksplisit
-    val name = "John Thor"
-    val score = 80
+    val name: String = "John Thor"
+    val score: Int = 80
 
     // REFACTOR: String Template ($name)
     println("Nama: $name, Nilai: $score")
-}
+
     val grade = when (score) {
         in 90..100 -> "A"
         in 80..89 -> "B"
@@ -22,7 +22,8 @@ fun main() {
 
     val idLength = studentId?.length ?: 0
 
-println("Panjang ID: $idLength")
+    println("Panjang ID: $idLength")
 }
 
 fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak Lulus"
+
