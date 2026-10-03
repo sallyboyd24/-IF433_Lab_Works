@@ -1,4 +1,5 @@
-package Week06
+package oop_142140_SallyZahara.Week06
+
 
 fun processCheckout(method: PaymentMethod, amount: Double) {
     println("-> Memulai checkout...")
@@ -16,7 +17,7 @@ fun main() {
     val pay2 = CreditCard()
 
     println("\n=== TESTING CHECKOUT ===")
-    processCheckout(method = 1, amount = 50000.0)
+    processCheckout(method = pay1, amount = 50000.0)
     processCheckout(method = pay2, amount = 150000.0)
 
 }
