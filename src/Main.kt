@@ -6,9 +6,6 @@ fun main() {
 
     println("=== UMN CATERING MANAGER SYSTEM ===")
     println()
-
-    // Phase 1: Pre-load Menu Database
-
     println("[Database Setup] Adding Nasi Goreng Spesial...")
 
     val nasiGoreng = FoodMenu(
@@ -41,8 +38,6 @@ fun main() {
         esTehLemon
     )
 
-    // Phase 2: Live Customer Input
-
     val scanner = Scanner(System.`in`)
 
     println("--- CUSTOMER DATA INPUT ---")
@@ -63,8 +58,6 @@ fun main() {
     )
 
     val order = CateringOrder(customer)
-
-    // Phase 3: Live Order Input Loop
 
     while (true) {
 
@@ -102,8 +95,6 @@ fun main() {
             println("Invalid menu number!")
         }
     }
-
-    // Phase 4: Print Invoice
 
     println()
     println("Processing Checkout...")
