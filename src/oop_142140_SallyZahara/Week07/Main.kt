@@ -28,4 +28,13 @@ fun main() {
 
     println("Nama: $userName")
     println("Umur: $userAge")
+
+    println("===== LATIHAN 3: SINGLETON =====")
+
+    val response: ApiResponse = ApiResponse.Loading
+
+    val uiMessage = when (response) {
+        is ApiResponse.Success -> "Tampilkan data"
+        is ApiResponse.Error -> "Tampilkan pesan error"
+    }
 }
