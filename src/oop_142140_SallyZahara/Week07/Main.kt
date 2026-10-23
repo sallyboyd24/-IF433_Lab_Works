@@ -8,3 +8,18 @@ val user2 = User("Sally", 19)
 
 println(user1)
 println(user1 == user2)
+
+
+fun main() {
+
+
+    println("===== LATIHAN 1: SINGLETON =====")
+
+    DatabaseManager.connect()
+    DatabaseManager.disconnect()
+
+    val client = NetworkClient.create(
+        "https://api.umn.ac.id"
+    )
+
+    client.connect()
