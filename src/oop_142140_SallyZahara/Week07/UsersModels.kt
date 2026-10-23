@@ -1,6 +1,6 @@
 package oop_142140_SallyZahara.Week07
 
-class User(
+class UsersModels {
     val name: String,
     val age: Int
-)
+}

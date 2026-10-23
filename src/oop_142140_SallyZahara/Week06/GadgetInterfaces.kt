@@ -1,6 +1,6 @@
 package oop_142140_SallyZahara.Week06
 
-interface camrea {
+interface Camera {
     fun turnOn() { println("Lensa kamera terbuka dan sesnor aktif.") }
 }
 
