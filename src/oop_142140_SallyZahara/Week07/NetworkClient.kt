@@ -6,5 +6,12 @@ class NetworkClient private constructor(
     fun connect() {
         println("Menghubungkan ke server: $baseUrl")
     }
+
+    companion object {
+        fun create(url: String): NetworkClient {
+            return NetworkClient(url)
+        }
+    }
 }
+
 
