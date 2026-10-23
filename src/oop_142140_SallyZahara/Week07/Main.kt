@@ -1,0 +1,10 @@
+package oop_142140_SallyZahara.Week07
+
+val client = NetworkClient.create("https://api.umn.ac.id")
+client.connect()
+
+val user1 = User("Sally", 19)
+val user2 = User("Sally", 19)
+
+println(user1)
+println(user1 == user2)
