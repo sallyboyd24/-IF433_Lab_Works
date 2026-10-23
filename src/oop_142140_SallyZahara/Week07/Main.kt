@@ -34,7 +34,10 @@ fun main() {
     val response: ApiResponse = ApiResponse.Loading
 
     val uiMessage = when (response) {
+        is ApiResponse.Loading -> "Tampilkan Spinner"
         is ApiResponse.Success -> "Tampilkan data"
         is ApiResponse.Error -> "Tampilkan pesan error"
     }
+
+    println(uiMessage)
 }
