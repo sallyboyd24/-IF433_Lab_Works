@@ -18,6 +18,7 @@ fun main() {
     DatabaseManager.connect()
     DatabaseManager.disconnect()
 
+    println("\n=== NETWORK CLIENT ===")
     val client = NetworkClient.create(
         "https://api.umn.ac.id"
     )
