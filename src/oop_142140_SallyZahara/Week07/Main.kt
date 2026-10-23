@@ -19,6 +19,6 @@ fun main() {
     val user1 = User("Sally", 19)
     val user2 = User("Sally", 19)
 
-    println(user1)
-    println(user1 == user2)
+    println(dataUser1)
+    println(dataUser1 == dataUser2)
 }
