@@ -16,9 +16,16 @@ fun main() {
     client.connect()
 
     println("===== LATIHAN 2: SINGLETON =====")
-    val user1 = User("Sally", 19)
-    val user2 = User("Sally", 19)
 
-    println(dataUser1)
-    println(dataUser1 == dataUser2)
+    val originalUser = UserData("Sally", 19)
+
+    val updatedUser = originalUser.copy(age = 20)
+
+    println("Data asli: $originalUser")
+    println("Data baru: $updatedUser")
+
+    val (userName, userAge) = originalUser
+
+    println("Nama: $userName")
+    println("Umur: $userAge")
 }
