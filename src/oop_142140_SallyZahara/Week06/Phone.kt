@@ -10,9 +10,9 @@ open class Camera {
     }
 }
 
-class Smartphone : Camera, Phone {
+class Smartphone : notCamera, Phone {
     override fun turnOn() {
-        super<Camera>.turnOn()
+        super<notCamera>.turnOn()
         println("Sistem operasi Smartphone berhasil booting.")
     }
 }

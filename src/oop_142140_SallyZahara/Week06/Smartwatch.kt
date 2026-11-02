@@ -1,7 +1,7 @@
 package oop_142140_SallyZahara.Week06
 
 class Smartwatch : Watch(), BluetoothConnectable, Rechargeable {
-    inner annotation class turnOn
+    annotation class turnOn
 
     override fun showTime() {
         println("Layar OLED menyala: 14:00 WIB")

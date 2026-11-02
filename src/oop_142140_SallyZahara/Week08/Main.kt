@@ -52,4 +52,26 @@ fun main() {
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
+
+    println("\n=== TEST JAVA INTEROP ===")
+    val javaResponse = LegacyJavaAPI.fetchServerStatus()
+
+    val statusLength = javaResponse!!.length
+    println("Status dari Java: $javaResponse (Length: $statusLength)")
+
+    runMockUnitTest()
+}
+object DatabaseMock {
+    fun findUser(id: Int): UserProfile? {
+        return if (id == 1) UserProfile("TestUser", "test@test.com") else null
+    }
+}
+
+fun runMockUnitTest() {
+    println("\n=== RUNNING UNIT TEST ===")
+    val testUser = DatabaseMock.findUser(1)
+
+    val initial = testUser!!.name.substring(0, 1)
+    check(initial == "T") { "Test Failed! Initial is wrong." }
+    println("Test Passed: Initial is T")
 }

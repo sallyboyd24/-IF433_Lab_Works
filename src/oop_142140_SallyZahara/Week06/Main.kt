@@ -10,7 +10,7 @@ fun main() {
     val myWatch = Smartwatch()
     myWatch.showTime()
 
-    val myPhone = Smartwatch()
+    val myPhone = Smartphone() // Ubah dari Smartwatch() ke Smartphone() jika turnOn() ada di sana
     myPhone.turnOn()
 
     val pay1 = Gopay()
