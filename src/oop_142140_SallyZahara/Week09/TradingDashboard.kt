@@ -1,5 +1,8 @@
 package oop_142140_SallyZahara.Week09
 
+fun main() {
+
+}
 val tradeHistory = listOf(
     TradeLog(
         pair = "BTCUSDT",
