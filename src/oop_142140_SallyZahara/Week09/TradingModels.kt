@@ -1,7 +1,6 @@
 package oop_142140_SallyZahara.Week09
 
 fun main() {
-
     val tradeHistory = listOf(
         TradeLog("BTCUSDT", "LONG", 20, 145.50, "CLOSED"),
         TradeLog("BTCUSDT", "SHORT", 10, -25.30, "OPEN"),
@@ -13,12 +12,13 @@ fun main() {
 
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
 
-    println("=== DAFTAR CLOSED TRADES ===")
-    closedTrades.forEach { trade ->
-        println("Pair: ${trade.pair} | Posisi: ${trade.position} | Leverage: ${trade.leverage}x | ROE: ${trade.roe}% | Status: ${trade.status}")
+    val winningTrades = closedTrades.filter { it.roe > 0 }
+
+    println("=== DAFTAR WINNING TRADES (CLOSED & PROFIT) ===")
+    winningTrades.forEach { trade ->
+        println("Pair: ${trade.pair} | Posisi: ${trade.position} | Leverage: ${trade.leverage}x | ROE: +${trade.roe}% | Status: ${trade.status}")
     }
 }
-
 
 data class TradeLog(
     val pair: String,
