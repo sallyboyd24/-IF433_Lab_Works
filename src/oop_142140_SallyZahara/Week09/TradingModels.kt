@@ -10,15 +10,14 @@ fun main() {
         TradeLog("ETHUSDT", "SHORT", 15, -15.20, "CLOSED")
     )
 
-    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
-    val losingTrades = closedTrades.filter { it.roe <= 0 }
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
 
-    val worstPerformersString = losingTrades
-        .sortedBy { it.roe }
-        .map { "LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (Lev: ${it.leverage}x)" }
-
-    println("=== WORST PERFORMERS ===")
-    worstPerformersString.forEach { println(it) }
+    println("=== PASANGAN KOIN YANG PERNAH DITRADINGKAN ===")
+    uniquePairs.forEach { pair ->
+        println("- $pair")
+    }
 }
 
 data class TradeLog(
