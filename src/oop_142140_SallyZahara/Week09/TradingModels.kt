@@ -12,10 +12,10 @@ fun main() {
 
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
 
-    val winningTrades = closedTrades.filter { it.roe > 0 }
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
 
-    println("=== DAFTAR WINNING TRADES (CLOSED & PROFIT) ===")
-    winningTrades.forEach { trade ->
+    println("=== DAFTAR LOSING TRADES (CLOSED & PROFIT) ===")
+    losingTrades.forEach { trade ->
         println("Pair: ${trade.pair} | Posisi: ${trade.position} | Leverage: ${trade.leverage}x | ROE: +${trade.roe}% | Status: ${trade.status}")
     }
 }
