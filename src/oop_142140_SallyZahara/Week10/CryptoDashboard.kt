@@ -17,4 +17,16 @@ fun main() {
         println("Coin: ${coin.name}, Balance: ${coin.balance}")
     }
 
+    val txRepo = WalletRepository<Transaction>()
+
+    txRepo.add(Transaction("TX001", 500.0))
+    txRepo.add(Transaction("TX002", 250.0))
+    txRepo.add(Transaction("TX003", 1000.0))
+
+    println("\n=== TRANSACTION HISTORY ===")
+
+    txRepo.getAll().forEach { transaction ->
+        println("ID: ${transaction.id}, Amount: ${transaction.amount}")
+    }
+
 }
