@@ -3,6 +3,7 @@ package oop_142140_SallyZahara.Week11
 fun main() {
     val homeDevices = mutableListOf<SmartDevice>()
 
+
     val smartLight = SmartDevice(
         name = "Philips WiZ Living Room",
         category = "Lighting"
@@ -54,4 +55,10 @@ fun main() {
     }
 
     println("Total daya seluruh perangkat: $totalPower Watt")
+
+    println("\n=== SMART HOME DASHBOARD ===")
+
+    homeDevices.forEach {
+        println(it.diagnose())
+    }
 }
