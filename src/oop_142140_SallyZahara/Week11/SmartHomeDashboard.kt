@@ -44,4 +44,8 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
+
+    with(homeDevices) {
+        println("Jumlah perangkat Smart Home: ${this.size}")
+    }
 }
